@@ -1,6 +1,6 @@
 <template>
   <div class="note-container">
-    <div class="note-selectors">
+    <!-- <div class="note-selectors">
       <div class="note-selector active">
         <p class="note-selector-title">First note...</p>
         <p class="note-selector-timestamp">Timestamp here...</p>
@@ -13,8 +13,9 @@
         <p class="note-selector-title">Third note...</p>
         <p class="note-selector-timestamp">Timestamp here...</p>
       </div>
-    </div>
-    <div class="note-editor">
+    </div> -->
+    <NoteSelectors />
+    <!-- <div class="note-editor">
       <p class="note-editor-info">Timestamp here...</p>
       <textarea class="note-editor-input">
 	          First note...
@@ -22,6 +23,19 @@
 	          Note text here...
 	        </textarea
       >
-    </div>
+    </div> -->
+    <NoteEditor />
   </div>
 </template>
+
+<script>
+import NoteSelectors from "./NoteSelectors.vue";
+import NoteEditor from "./NoteEditor.vue";
+
+export default {
+  components: {
+    NoteSelectors,
+    NoteEditor,
+  },
+};
+</script>
